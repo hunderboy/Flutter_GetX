@@ -26,9 +26,23 @@ class Home extends StatelessWidget {
                 Get.toNamed("/first");
               },
             ),
+            RaisedButton(
+              child: Text("Argument 전달"),
+              onPressed: () {
+                // arguments 에 객체나 String, Int 등 다양한 타입의 데이터를 이동하는 화면에 전달 가능
+                Get.toNamed("/next", arguments: User("개발하는남자", 22));
+              },
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+class User {
+  String name;
+  int age;
+
+  User(this.name, this.age);
 }

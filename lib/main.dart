@@ -4,6 +4,7 @@ import 'package:getx_example/src/home.dart';
 
 import 'src/pages/named/first.dart';
 import 'src/pages/named/second.dart';
+import 'src/pages/next.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,15 +22,20 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: "/",
-      routes: {
-        "/": (context) => Home(),
-        "/first": (context) => FirstNamedPage(),
-        "/second": (context) => SecondNamedPage(),
-      },
       getPages: [
-        GetPage(name: "/", page: () => Home()),
-        GetPage(name: "/first", page: () => FirstNamedPage()),
-        GetPage(name: "/second", page: () => SecondNamedPage()),
+        GetPage(name: "/", page: () => Home(), transition: Transition.zoom),
+        GetPage(
+            name: "/first",
+            page: () => FirstNamedPage(),
+            transition: Transition.zoom),
+        GetPage(
+            name: "/second",
+            page: () => SecondNamedPage(),
+            transition: Transition.zoom),
+        GetPage(
+            name: "/next",
+            page: () => NextPage(),
+            transition: Transition.zoom),
       ],
     );
   }
