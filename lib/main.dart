@@ -5,6 +5,7 @@ import 'package:getx_example/src/home.dart';
 import 'src/pages/named/first.dart';
 import 'src/pages/named/second.dart';
 import 'src/pages/next.dart';
+import 'src/pages/user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,10 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: "/next",
             page: () => NextPage(),
+            transition: Transition.zoom),
+        GetPage(
+            name: "/user/:uid",
+            page: () => UserPage(),
             transition: Transition.zoom),
       ],
     );
