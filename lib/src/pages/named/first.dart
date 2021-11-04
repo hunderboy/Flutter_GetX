@@ -17,6 +17,7 @@ class FirstNamedPage extends StatelessWidget {
             RaisedButton(
               child: Text("다음페이지 이동"),
               onPressed: () {
+                Get.offNamed("/second");
               },
             ),
           ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../home.dart';
+import '../../Home.dart';
 
 class SecondNamedPage extends StatelessWidget {
   const SecondNamedPage({Key? key}) : super(key: key);
@@ -24,8 +24,7 @@ class SecondNamedPage extends StatelessWidget {
             RaisedButton(
               child: Text("홈으로 이동"),
               onPressed: () {
-                Get.to(Home());
-                Get.offAll(Home());
+                Get.offAllNamed("/");
               },
             ),
           ],

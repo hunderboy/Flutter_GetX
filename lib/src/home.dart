@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_example/src/normal/first.dart';
+import 'pages/normal/first.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,6 +18,12 @@ class Home extends StatelessWidget {
               child: Text("일반적인 라우트"),
               onPressed: () {
                 Get.to(FirstPage());
+              },
+            ),
+            RaisedButton(
+              child: Text("Named 라우트"),
+              onPressed: () {
+                Get.toNamed("/first");
               },
             ),
           ],
