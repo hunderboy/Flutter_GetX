@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_example/src/pages/simple_state_manage_page.dart';
 import 'pages/normal/first.dart';
 
 class Home extends StatelessWidget {
@@ -34,10 +35,10 @@ class Home extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text("동적 URL 전달"),
+              child: Text("단순상태관리"),
               onPressed: () {
                 // arguments 에 객체나 String, Int 등 다양한 타입의 데이터를 이동하는 화면에 전달 가능
-                Get.toNamed("/user/28357?name=개남&age=22");
+                Get.to(SimpleStateMananePage());
               },
             ),
           ],
