@@ -11,4 +11,8 @@ class CountControllerWithReactive {
   void increase() {
     count++;
   }
+
+  void putNumber(int value){
+    count(value); // count = value 와 같은 내용 (observable 이라서 저렇게 작성)
+  }
 }
