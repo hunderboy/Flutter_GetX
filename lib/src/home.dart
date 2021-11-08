@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
               child: Text("단순상태관리"),
               onPressed: () {
                 // arguments 에 객체나 String, Int 등 다양한 타입의 데이터를 이동하는 화면에 전달 가능
-                Get.to(SimpleStateMananePage());
+                Get.to(SimpleStateManagePage());
               },
             ),
           ],
