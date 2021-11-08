@@ -29,7 +29,7 @@ class ReactiveStateManagePage extends StatelessWidget {
                * 값을 5로 설정 한뒤에 "5로 변경" 을 계속 눌러도 데이터가 변하지 않으니
                * 화면 업데이트가 일어나지 않는다.
                */
-            print("update");
+            print("반응형 update");
             return Text(
               "${Get.find<CountControllerWithReactive>().count.value}",
               style: TextStyle(fontSize: 50));

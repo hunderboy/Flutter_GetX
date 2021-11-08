@@ -40,7 +40,7 @@ class WithGetX extends StatelessWidget {
                * 5로 변경 버튼을 누르면
                * 계속 update가 찍힘 [굳이 UI 변경이 일어날 필요가 없는데. = 불필요 함.]
                */
-              print("update!!!");
+              print("단순 update!!!");
               return Text("${controller.count}", style: TextStyle(fontSize: 50),);
           }),
           // GetBuilder<CountCotrollerWithGetx>(
