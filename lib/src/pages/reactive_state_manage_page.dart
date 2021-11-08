@@ -23,10 +23,12 @@ class ReactiveStateManagePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text( "Getx", style: TextStyle(fontSize: 30)),
-            Obx(()=> Text(
-                "${Get.find<CountControllerWithReactive>().count.value}",
-                style: TextStyle(fontSize: 50))
-            ),
+            Obx(() {
+            print("update"); // 값이 변화 될때만 UI 변경이 일어난다는 것을 보여주기 위한 프린트
+            return Text(
+              "${Get.find<CountControllerWithReactive>().count.value}",
+              style: TextStyle(fontSize: 50))
+            }),
             RaisedButton(
               child: Text("+", style: TextStyle(fontSize: 30)),
               onPressed: () {
