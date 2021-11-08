@@ -4,8 +4,13 @@ import 'package:get/get.dart';
 class CountCotrollerWithGetx extends GetxController {
   int count = 0;
 
-  void increase(String id) {
+  void increase() {
     count++;
-    update([id]);
+    update();
+  }
+
+  void putNumber(int value) {
+    count = value;
+    update();
   }
 }
