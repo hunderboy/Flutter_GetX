@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+enum NUM {FIRST,SECOND}
+
+class User {
+  String name;
+  int age;
+
+  User({required this.name, required this.age});
+}
+
 class CountControllerWithReactive extends GetxController {
   /*** 반응형 변수 */
   RxInt count = 0.obs;
+  RxDouble _double = 0.0.obs;
+  RxString value = "dd".obs;
+  Rx<NUM> nums = NUM.FIRST.obs;
+  Rx<User> user = User(name: "개남", age: 34).obs;
 
   /**
    * 굳이 업데이트 하는 함수를 추가해 주지 않아도,
@@ -11,6 +24,13 @@ class CountControllerWithReactive extends GetxController {
    */
   void increase() {
     count++;
+    _double(425);     // Double 값 할당
+    nums(NUM.SECOND); // 값 변경
+    // user(User()); // 객체를 통째로 넣어서 업데이트
+    user.update((_user){  // 일부만 없데이트
+      _user?.name = "개발하는 남자";
+    });
+
   }
 
   void putNumber(int value){
