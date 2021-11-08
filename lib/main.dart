@@ -24,7 +24,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       getPages: [
-        GetPage(name: "/", page: () => Home(), transition: Transition.zoom),
+        GetPage(
+            name: "/",
+            page: () => Home(),
+            transition: Transition.zoom),
         GetPage(
             name: "/first",
             page: () => FirstNamedPage(),
