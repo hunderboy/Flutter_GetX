@@ -17,7 +17,7 @@ class CountControllerWithReactive extends GetxController {
   RxString value = "dd".obs;
   Rx<NUM> nums = NUM.FIRST.obs;
   Rx<User> user = User(name: "개남", age: 34).obs;
-
+  RxList<String> list = [""].obs;
   /**
    * 굳이 업데이트 하는 함수를 추가해 주지 않아도,
    * 반응형이라서 변화가 있을때, 바로 변화된 데이터가 적용된다.
@@ -31,6 +31,10 @@ class CountControllerWithReactive extends GetxController {
       _user?.name = "개발하는 남자";
     });
 
+    // 리스트에 데이터 삽입
+    // list.addAll(item);  // 모든 아이템 삽입
+    // list.add();  // 아이템 개별 선택하여 삽입
+    list.addIf(user.value.name=="개발하는 남자", "okay"); // 조건을 만족하면, okay 삽입
   }
 
   void putNumber(int value){
