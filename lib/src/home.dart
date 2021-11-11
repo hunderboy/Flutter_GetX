@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_example/src/pages/dependencys/dependency_manage_page.dart';
 import 'package:getx_example/src/pages/simple_state_manage_page.dart';
 import 'pages/normal/first.dart';
 import 'pages/reactive_state_manage_page.dart';
@@ -47,6 +48,13 @@ class Home extends StatelessWidget {
               onPressed: () {
                 // arguments 에 객체나 String, Int 등 다양한 타입의 데이터를 이동하는 화면에 전달 가능
                 Get.to(ReactiveStateManagePage());
+              },
+            ),
+            RaisedButton(
+              child: Text("의존성 관리"),
+              onPressed: () {
+                // arguments 에 객체나 String, Int 등 다양한 타입의 데이터를 이동하는 화면에 전달 가능
+                Get.to(DependencyManagePage());
               },
             ),
           ],
