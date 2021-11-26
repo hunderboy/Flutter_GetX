@@ -63,6 +63,12 @@ class Home extends StatelessWidget {
                 Get.toNamed("/binding");
               },
             ),
+            RaisedButton(
+              child: Text("Getx Service"),
+              onPressed: () {
+                Get.toNamed("/getService");
+              },
+            ),
           ],
         ),
       ),
